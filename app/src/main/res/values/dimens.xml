@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="home_bottom_nav_height">56dp</dimen>
+
+    <!--icons-sizes-->
+    <dimen name="icon_max_height_xs">8dp</dimen>
+    <dimen name="icon_max_height_small">16dp</dimen>
+    <dimen name="icon_max_height_regular">20dp</dimen>
+    <dimen name="icon_max_height_base">24dp</dimen>
+    <dimen name="icon_max_height_medium">32dp</dimen>
+    <dimen name="icon_max_height_big">40dp</dimen>
+    <dimen name="icon_max_height_large">48dp</dimen>
+    <dimen name="icon_max_height_xl">56dp</dimen>
+    <dimen name="icon_max_height_xxl">64dp</dimen>
+    <dimen name="icon_max_width_xs">8dp</dimen>
+    <dimen name="icon_max_width_small">16dp</dimen>
+    <dimen name="icon_max_width_regular">20dp</dimen>
+    <dimen name="icon_max_width_base">24dp</dimen>
+    <dimen name="icon_max_width_medium">32dp</dimen>
+    <dimen name="icon_max_width_big">40dp</dimen>
+    <dimen name="icon_max_width_large">48dp</dimen>
+    <dimen name="icon_max_width_xl">56dp</dimen>
+    <dimen name="icon_max_width_xxl">64dp</dimen>
+
+    <!--margins-->
+    <dimen name="margin_none">0dp</dimen>
+    <dimen name="margin_xs">2dp</dimen>
+    <dimen name="margin_small">4dp</dimen>
+    <dimen name="margin_regular">6dp</dimen>
+    <dimen name="margin_base">8dp</dimen>
+    <dimen name="margin_medium">12dp</dimen>
+    <dimen name="margin_big">16dp</dimen>
+    <dimen name="margin_large">24dp</dimen>
+    <dimen name="margin_xl">32dp</dimen>
+    <dimen name="margin_xxl">48dp</dimen>
+
+    <!--paddings-->
+    <dimen name="padding_none">0dp</dimen>
+    <dimen name="padding_xs">2dp</dimen>
+    <dimen name="padding_small">4dp</dimen>
+    <dimen name="padding_regular">6dp</dimen>
+    <dimen name="padding_base">8dp</dimen>
+    <dimen name="padding_medium">12dp</dimen>
+    <dimen name="padding_big">16dp</dimen>
+    <dimen name="padding_large">24dp</dimen>
+    <dimen name="padding_xl">32dp</dimen>
+    <dimen name="padding_xxl">48dp</dimen>
+
+    <!--text-sizes-->
+    <dimen name="text_size_xs">11sp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_base">14sp</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
+    <dimen name="text_size_large">20sp</dimen>
+    <dimen name="text_size_xl">24sp</dimen>
+    <dimen name="text_size_xxl">26sp</dimen>
+
+</resources>

@@ -1,9 +1,18 @@
-package me.darthwithap.flatsounds
+package me.darthwithap.flatsounds.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import me.darthwithap.flatsounds.R
 
 class MainActivity : AppCompatActivity() {
+    companion object {
+        private const val TAG = "MainActivity"
+    }
+
+    //UI Components
+
+    //Vars
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)

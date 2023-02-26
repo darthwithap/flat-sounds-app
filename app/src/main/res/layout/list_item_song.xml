@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_song_album_art"
+            android:layout_width="@dimen/icon_max_width_large"
+            android:layout_height="@dimen/icon_max_height_large"
+            android:layout_margin="@dimen/margin_xs"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/ImageViewCornerRadius8dp"
+            tools:src="@tools:sample/avatars" />
+
+        <LinearLayout
+            android:id="@+id/ll_song_name_artist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_medium"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_song_album_art"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_song_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/font_bold"
+                android:padding="@dimen/padding_xs"
+                android:textColor="@color/flat_text_black"
+                android:textSize="@dimen/text_size_base"
+                app:layout_constraintStart_toEndOf="@id/iv_song_album_art"
+                app:layout_constraintTop_toTopOf="@id/iv_song_album_art"
+                tools:text="John Bonham" />
+
+            <TextView
+                android:id="@+id/tv_song_artist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.6"
+                android:fontFamily="@font/font_semi_bold"
+                android:padding="@dimen/padding_xs"
+                android:textColor="@color/flat_text_black"
+                android:textSize="@dimen/text_size_xs"
+                app:layout_constraintStart_toEndOf="@id/iv_song_album_art"
+                app:layout_constraintTop_toTopOf="@id/iv_song_album_art"
+                tools:text="John Bonham" />
+
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/menu_artist_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_small"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_meatball_menu" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
