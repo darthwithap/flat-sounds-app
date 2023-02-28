@@ -10,10 +10,6 @@ import me.darthwithap.flatsounds.databinding.FragmentCategoryBinding
 
 class CategoryFragment : Fragment() {
 
-  companion object {
-    fun newInstance() = CategoryFragment()
-  }
-
   private lateinit var viewModel: CategoryViewModel
   private lateinit var binding: FragmentCategoryBinding
 
