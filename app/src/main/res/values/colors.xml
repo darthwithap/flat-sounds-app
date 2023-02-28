@@ -20,5 +20,6 @@
   <color name="colorPrimaryLight">@color/flat_green_light</color>
   <color name="colorPrimaryExtraLight">@color/flat_green_extra_light</color>
 
+  <color name="flat_black_50_alpha">#80000000</color>
 
 </resources>

@@ -1,11 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"
   tools:context=".ui.playlist.PlaylistFragment">
 
   <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/container_playlist_header"
+      android:layout_width="match_parent"
+      android:layout_height="200dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+      <ImageView
+        android:id="@+id/iv_playlist_header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:src="@tools:sample/avatars" />
+
+      <ImageView
+        android:layout_width="@dimen/icon_max_width_base"
+        android:layout_height="@dimen/icon_max_height_base"
+        android:layout_margin="@dimen/margin_large"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_back_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:tint="@color/flat_black" />
+
+      <LinearLayout
+        android:id="@+id/ll_playlist_header_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_xl"
+        android:layout_marginBottom="@dimen/margin_xl"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+          android:id="@+id/tv_album_name_header"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:fontFamily="@font/font_bold"
+          android:textColor="@color/flat_white"
+          android:textSize="@dimen/text_size_large"
+          tools:text="The Beatles"
+          tools:textColor="@color/flat_black" />
+
+        <TextView
+          android:id="@+id/tv_artist_name_header"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:fontFamily="@font/font_semi_bold"
+          android:textColor="@color/flat_white"
+          android:textSize="@dimen/text_size_xs"
+          tools:text="Abbey Road"
+          tools:textColor="@color/flat_black" />
+
+      </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/rv_playlist"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_marginHorizontal="@dimen/margin_large"
+      android:layout_marginVertical="@dimen/margin_big"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/container_playlist_header" />
 
   </androidx.constraintlayout.widget.ConstraintLayout>
 

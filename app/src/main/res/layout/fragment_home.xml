@@ -1,11 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"
   tools:context=".ui.home.HomeFragment">
+
+  <data>
+
+    <variable
+      name="isMediaPlaying"
+      type="Boolean" />
+  </data>
 
   <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <TextView
+      android:id="@+id/tv_home_heading"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/margin_big"
+      android:fontFamily="@font/font_bold"
+      android:text="Choose Format"
+      android:textColor="@color/flat_dark_black"
+      android:textSize="@dimen/text_size_big"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/rv_home"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_margin="@dimen/margin_big"
+      app:layout_constraintBottom_toTopOf="@id/ll_media_controller_fragment"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/tv_home_heading" />
+
+    <LinearLayout
+      android:id="@+id/ll_media_controller_fragment"
+      visibleIf="@{isMediaPlaying}"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:visibility="gone"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      tools:visibility="visible">
+
+      <fragment
+        android:id="@+id/media_controller_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_media_controller" />
+
+    </LinearLayout>
 
   </androidx.constraintlayout.widget.ConstraintLayout>
 

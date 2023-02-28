@@ -7,8 +7,19 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
+    <com.google.android.material.imageview.ShapeableImageView
+      android:id="@+id/iv_song_album_art"
+      android:layout_width="@dimen/icon_max_width_large"
+      android:layout_height="@dimen/icon_max_height_large"
+      android:layout_margin="@dimen/margin_xs"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:shapeAppearanceOverlay="@style/ImageViewCornerRadius8dp"
+      tools:src="@tools:sample/avatars" />
+
     <TextView
-      android:id="@+id/tv_playlist"
+      android:id="@+id/tv_artist_name"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginHorizontal="@dimen/margin_medium"
@@ -17,12 +28,12 @@
       android:textColor="@color/flat_dark_black"
       android:textSize="@dimen/text_size_base"
       app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintStart_toEndOf="@id/iv_song_album_art"
       app:layout_constraintTop_toTopOf="parent"
-      tools:text="Top Hits" />
+      tools:text="John Bonham" />
 
     <androidx.appcompat.widget.AppCompatImageView
-      android:id="@+id/menu_playlist_item"
+      android:id="@+id/menu_artist_item"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_margin="@dimen/margin_small"

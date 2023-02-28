@@ -26,7 +26,7 @@ class SplashFragment : Fragment() {
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
     //Hacky fix to show the SplashScreen for sometime
-    //TODO: Include viewModel in SplashScreen to account for Stage of the app and direct to a proper destination in the app
+    //TODO: Include viewModel in SplashScreen to account for Stage of the app and direct to a proper destination accordingly
     Handler(Looper.getMainLooper()).postDelayed(
       {
         findNavController().navigate("flatsounds://home".toUri())

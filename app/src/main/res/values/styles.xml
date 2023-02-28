@@ -4,4 +4,8 @@
   <style name="ImageViewCornerRadius8dp" parent="">
     <item name="cornerSize">8dp</item>
   </style>
+
+  <style name="ImageViewCornerRadius50P" parent="">
+    <item name="cornerSize">50%</item>
+  </style>
 </resources>
