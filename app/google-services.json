@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "173760704154",
+    "project_id": "flat-sounds-android",
+    "storage_bucket": "flat-sounds-android.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:173760704154:android:6a54f2519b95daaaa5f923",
+        "android_client_info": {
+          "package_name": "me.darthwithap.flatsounds"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "173760704154-ruprbdvonfmlvojer2hdftr1060j6kuj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAj7GcWObHu-dYebmLB5qOznCocqSMrtXU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "173760704154-ruprbdvonfmlvojer2hdftr1060j6kuj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
