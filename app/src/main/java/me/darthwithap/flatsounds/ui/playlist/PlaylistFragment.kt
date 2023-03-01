@@ -10,10 +10,6 @@ import me.darthwithap.flatsounds.databinding.FragmentPlaylistBinding
 
 class PlaylistFragment : Fragment() {
 
-  companion object {
-    fun newInstance() = PlaylistFragment()
-  }
-
   private lateinit var viewModel: PlaylistViewModel
   private lateinit var binding: FragmentPlaylistBinding
 

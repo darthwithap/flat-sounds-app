@@ -29,13 +29,10 @@ class SplashFragment : Fragment() {
     //TODO: Include viewModel in SplashScreen to account for Stage of the app and direct to a proper destination accordingly
     Handler(Looper.getMainLooper()).postDelayed(
       {
-        findNavController().navigate("flatsounds://home".toUri())
+        findNavController().apply {
+          navigate("flatsounds://home".toUri())
+        }
       }, 2000
     )
-  }
-
-  companion object {
-    @JvmStatic
-    fun newInstance() = SplashFragment()
   }
 }

@@ -10,10 +10,6 @@ import me.darthwithap.flatsounds.databinding.FragmentMediaControllerBinding
 
 class MediaControllerFragment : Fragment() {
 
-  companion object {
-    fun newInstance() = MediaControllerFragment()
-  }
-
   private lateinit var viewModel: MediaControllerViewModel
   private lateinit var binding: FragmentMediaControllerBinding
 

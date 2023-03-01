@@ -5,6 +5,14 @@
   android:clickable="true"
   android:focusable="true">
 
+  <data>
+
+    <variable
+      name="categoryStr"
+      type="String" />
+
+  </data>
+
   <androidx.cardview.widget.CardView
     android:id="@+id/category_cv_holder"
     android:layout_width="150dp"

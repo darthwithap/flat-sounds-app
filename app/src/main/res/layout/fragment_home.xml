@@ -13,7 +13,8 @@
 
   <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
 
     <TextView
       android:id="@+id/tv_home_heading"
@@ -21,7 +22,7 @@
       android:layout_height="wrap_content"
       android:layout_margin="@dimen/margin_big"
       android:fontFamily="@font/font_bold"
-      android:text="Choose Format"
+      android:text="@string/choose_format"
       android:textColor="@color/flat_dark_black"
       android:textSize="@dimen/text_size_big"
       app:layout_constraintStart_toStartOf="parent"
@@ -48,8 +49,9 @@
       app:layout_constraintStart_toStartOf="parent"
       tools:visibility="visible">
 
-      <fragment
+      <androidx.fragment.app.FragmentContainerView
         android:id="@+id/media_controller_fragment"
+        android:name="me.darthwithap.flatsounds.ui.mediacontroller.MediaControllerFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:layout="@layout/fragment_media_controller" />
