@@ -3,50 +3,56 @@ package me.darthwithap.flatsounds.ui.home
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import me.darthwithap.flatsounds.databinding.ListItemCategoryBinding
+import me.darthwithap.flatsounds.databinding.ListItemTypeBinding
 
-class HomeAdapter : RecyclerView.Adapter<HomeAdapter.HomeViewHolder>() {
+class HomeAdapter : ListAdapter<String, HomeAdapter.HomeViewHolder>(
+  object : DiffUtil.ItemCallback<String>() {
+    override fun areItemsTheSame(oldItem: String, newItem: String): Boolean {
+      return oldItem == newItem
+    }
 
-  private lateinit var types: ArrayList<String>
+    override fun areContentsTheSame(oldItem: String, newItem: String): Boolean {
+      return oldItem == newItem
+    }
+
+  }
+) {
+
   private var clickListener: OnCategoryItemClickListener? = null
 
   override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeViewHolder {
-
-
-    val binding = ListItemCategoryBinding.inflate(
+    val binding = ListItemTypeBinding.inflate(
       LayoutInflater.from(parent.context),
-      parent, false
+      parent,
+      false
     )
     return HomeViewHolder(binding.root)
   }
 
-  override fun getItemCount(): Int {
-    return types.size
-  }
-
   override fun onBindViewHolder(holder: HomeViewHolder, position: Int) {
-    holder.bind(position)
+    holder.bind(getItem(position))
   }
 
 
   inner class HomeViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-    fun bind(position: Int) {
-      ListItemCategoryBinding.bind(itemView).apply {
-        categoryStr = types[position]
-        root.setOnClickListener {
-          clickListener?.onCategoryItemClickListener(position)
-        }
+    private val binding: ListItemTypeBinding = ListItemTypeBinding.bind(itemView)
+
+    fun bind(type: String) {
+      binding.tvCategory.text = type
+      binding.root.setOnClickListener {
+        clickListener?.onCategoryItemClickListener(layoutPosition)
       }
     }
-
   }
 
   interface OnCategoryItemClickListener {
     fun onCategoryItemClickListener(position: Int)
   }
 
-  fun setOnCategoryItemClickListener(listener: OnCategoryItemClickListener) {
+  fun setOnCategorySelected(listener: OnCategoryItemClickListener) {
     clickListener = listener
   }
 }
